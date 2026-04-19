@@ -1,0 +1,250 @@
+:root {
+  --bg: #0a0a0a;
+  --card: #141414;
+  --border: #2a2a2a;
+  --accent: #c9a03d;
+  --text: #ffffff;
+  --muted: #b9b9b9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+.header {
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.header-inner {
+  min-height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #111;
+}
+
+.btn-accent:hover {
+  filter: brightness(1.08);
+}
+
+main section {
+  padding: 54px 0;
+}
+
+.hero {
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+  max-width: 680px;
+  display: grid;
+  gap: 14px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(42px, 10vw, 88px);
+}
+
+.subtitle {
+  margin: 0;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+h2 {
+  margin: 0 0 12px;
+}
+
+.about p,
+.reservation > .container > p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.city-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.city-btn {
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #101010;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.city-btn:hover,
+.city-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.card-index {
+  font-size: 12px;
+  color: #8d8d8d;
+}
+
+.card-address a {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.card-meta {
+  color: var(--muted);
+}
+
+.card .btn {
+  width: fit-content;
+}
+
+#map {
+  margin-top: 18px;
+  height: 460px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.64);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  width: min(540px, 92vw);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #111;
+  padding: 16px;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modal-close {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.field input,
+.field select {
+  background: #0d0d0d;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.field-check {
+  color: var(--muted);
+}
+
+.error {
+  min-height: 14px;
+  font-size: 12px;
+  color: #d14f4f;
+}
+
+.invalid {
+  border-color: #d14f4f !important;
+}

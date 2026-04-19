@@ -1,0 +1,43 @@
+@media (max-width: 1024px) {
+  .restaurants {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .header-inner {
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 14px;
+    order: 3;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .restaurants {
+    grid-template-columns: 1fr;
+  }
+
+  #map {
+    height: 380px;
+  }
+}
+
+@media (max-width: 420px) {
+  body {
+    font-size: 14px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .btn {
+    padding: 10px 12px;
+  }
+}
