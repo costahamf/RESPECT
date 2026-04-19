@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="THE БЫК — сеть мясных ресторанов: адреса, карта, рейтинг и заказ стикера."
+    />
+    <title>THE БЫК — Мясной ресторан</title>
+
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="THE БЫК">
+          <span class="logo-text">THE БЫК</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Основная навигация">
+          <a href="#city-selector">Выберите город</a>
+          <a href="#mobile-app">Меню</a>
+          <a href="#restaurants">Резервирование</a>
+          <a href="#history">О нас</a>
+        </nav>
+
+        <button class="btn btn-red" type="button" data-open-sticker>Заказать стикер</button>
+
+        <button class="burger" id="burgerButton" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <aside class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+      <a href="#city-selector">Выберите город</a>
+      <a href="#mobile-app">Меню</a>
+      <a href="#restaurants">Резервирование</a>
+      <a href="#history">О нас</a>
+      <button class="btn btn-red" type="button" data-open-sticker>Заказать стикер</button>
+    </aside>
+
+    <main>
+      <section class="hero section-anchor" id="hero">
+        <div class="container hero-content fade-in">
+          <h1>THE БЫК</h1>
+          <p class="hero-subtitle">МЯСНОЙ РЕСТОРАН</p>
+          <p>Закажи бесплатный платежный стикер THE БЫК</p>
+          <div class="hero-actions">
+            <button class="btn btn-red" type="button" data-open-sticker>Заказать стикер</button>
+            <a class="btn btn-light" href="#restaurants">Смотреть рестораны</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mission section-anchor" id="mission">
+        <div class="container mission-content fade-in">
+          <h2 class="visually-hidden">Миссия</h2>
+          <p class="mission-text">«НАША МИССИЯ – ДЕМОКРАТИЗАЦИЯ КУЛЬТУРЫ ПОТРЕБЛЕНИЯ МЯСА.»</p>
+          <span class="tag">#МяснойРесторан — Хочешь работать у нас? Пиши!</span>
+          <a class="btn btn-red" href="#">Хочу работать!</a>
+        </div>
+      </section>
+
+      <section class="city-selector section-anchor" id="city-selector">
+        <div class="container fade-in">
+          <h2>Выберите город</h2>
+          <div class="city-list" id="cityList"></div>
+        </div>
+      </section>
+
+      <section class="restaurants section-anchor" id="restaurants">
+        <div class="container fade-in">
+          <div class="section-header">
+            <h2 id="restaurantsTitle">Рестораны</h2>
+            <button class="btn btn-light" id="showMoreButton" type="button" hidden></button>
+          </div>
+
+          <div class="restaurants-grid" id="restaurantsGrid"></div>
+          <div id="map" aria-label="Карта ресторанов"></div>
+        </div>
+      </section>
+
+      <section class="history section-anchor" id="history">
+        <div class="container history-grid fade-in">
+          <div>
+            <h2>История</h2>
+            <p class="history-text">
+              «Первый ресторан „The Бык“ был открыт в Калуге в 2016 году. Очень скоро он стал любимым местом истинных
+              мясоедов. С 2018 года одноимённые мясные рестораны начали открываться в Москве и быстро завоевали любовь
+              жителей и гостей столицы.»
+            </p>
+
+            <blockquote class="founder-quote">
+              «Я часто слышу, что стейки доступны не всем. Для нас это миф. Мы считаем, что хорошее мясо может и должно
+              быть доступно. И эта идея лежит в основе нашей ресторанной концепции — самого демократичного из мясных и
+              самого мясного из демократичных ресторанов „The Бык“»
+              <footer>— Мехак Галстян</footer>
+            </blockquote>
+          </div>
+
+          <div class="founder-image founder-placeholder" role="img" aria-label="Фото основателя (добавляется заказчиком)">
+            founder image placeholder
+          </div>
+        </div>
+      </section>
+
+      <section class="rating section-anchor" id="rating">
+        <div class="container rating-card fade-in">
+          <p>«Рейтинг организации в Яндекс» — 4.8 ★★★★★</p>
+          <div class="stars" aria-hidden="true">★★★★★</div>
+          <p><strong>4.8</strong> на основе 1247 отзывов</p>
+          <p>Яндекс</p>
+        </div>
+      </section>
+
+      <section class="mobile-app section-anchor" id="mobile-app">
+        <div class="container fade-in">
+          <h2>МОБИЛЬНОЕ ПРИЛОЖЕНИЕ</h2>
+          <div class="app-grid">
+            <a href="#city-selector">Выберите город</a>
+            <a href="#mobile-app">Меню</a>
+            <a href="#restaurants">Резервирование</a>
+            <a href="#history">О нас</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <h3>ИНФОРМАЦИЯ ДЛЯ СОТРУДНИЧЕСТВА</h3>
+
+        <div class="socials">
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="VK">VK</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+
+        <button class="btn btn-red" type="button">Поделиться ресторанами</button>
+        <p>THE БЫК, 2026. Все права защищены.</p>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTopButton" type="button" aria-label="Наверх">↑</button>
+
+    <div class="modal-overlay" id="stickerModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="stickerTitle">
+        <div class="modal-header">
+          <h3 id="stickerTitle">Заказать стикер</h3>
+          <button class="modal-close" id="modalCloseButton" type="button" aria-label="Закрыть">×</button>
+        </div>
+
+        <form id="stickerForm" novalidate>
+          <div class="form-field">
+            <label for="name">Имя *</label>
+            <input id="name" name="name" required />
+            <span class="error" data-error-for="name"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Телефон *</label>
+            <input id="phone" name="phone" placeholder="+7 (___) ___-__-__" required />
+            <span class="error" data-error-for="phone"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" required />
+            <span class="error" data-error-for="email"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="city">Город *</label>
+            <select id="city" name="city" required>
+              <option value="">Выберите город</option>
+              <option>Москва</option>
+              <option>Санкт-Петербург</option>
+              <option>Тула</option>
+              <option>Калуга</option>
+              <option>Ереван</option>
+            </select>
+            <span class="error" data-error-for="city"></span>
+          </div>
+
+          <div class="form-field checkbox-field">
+            <label>
+              <input id="agree" type="checkbox" />
+              Согласен на обработку персональных данных
+            </label>
+            <span class="error" data-error-for="agree"></span>
+          </div>
+
+          <button class="btn btn-red" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      window.YANDEX_MAPS_API_KEY = window.YANDEX_MAPS_API_KEY || "";
+    </script>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
